@@ -41,9 +41,6 @@ export default function MeetingComponent() {
     if (meetingEvent) {
       if (meetingEvent.name === 'meetingStartSucceeded') {
         setMeetingId(meetingEvent.attributes.meetingId);
-        setTimeout(() => {
-          handleEnd();
-        }, 60000);
       }
     }
   }, [meetingEvent]); // eslint-disable-line react-hooks/exhaustive-deps
